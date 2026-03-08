@@ -62,7 +62,7 @@ def analyze_trace(
         ],
     )
 
-    return json.loads(response.content[0].text)
+    return json.loads(response.content[0].text)  # type: ignore[union-attr]
 
 
 def apply_learned_patterns(patterns_path: Path, new_patterns: list[str]) -> None:

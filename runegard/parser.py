@@ -55,7 +55,7 @@ def parse_runbook(path: Path) -> Runbook:
             max_tokens=4096,
             messages=[{"role": "user", "content": f"{PARSE_PROMPT}\n\n---\n\n{text}"}],
         )
-        raw_json = response.content[0].text
+        raw_json = response.content[0].text  # type: ignore[union-attr]
         data = json.loads(raw_json)
         return _json_to_runbook(data)
     except Exception:
