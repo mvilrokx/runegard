@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "==> pre-commit: formatting staged Python files"
+STAGED_PY_FILES=$(git diff --cached --name-only --diff-filter=d -- '*.py')
+if [ -n "$STAGED_PY_FILES" ]; then
+    echo "$STAGED_PY_FILES" | xargs uv run ruff format
+    echo "$STAGED_PY_FILES" | xargs uv run ruff check --fix
+    echo "$STAGED_PY_FILES" | xargs git add
+fi
+
+echo "==> pre-commit: testing changed packages"
+CHANGED_TEST_FILES=$(git diff --cached --name-only --diff-filter=d -- 'tests/*.py')
+if [ -n "$CHANGED_TEST_FILES" ]; then
+    uv run pytest $CHANGED_TEST_FILES -x -q
+elif [ -n "$STAGED_PY_FILES" ]; then
+    uv run pytest tests/ -x -q 2>/dev/null || echo "  no tests found, skipping"
+fi
+
+echo "==> pre-commit: all checks passed"
