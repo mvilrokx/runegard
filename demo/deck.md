@@ -9,6 +9,7 @@ style: |
   }
   h1 {
     color: #58a6ff;
+    font-size: 1.4em;
   }
   h2 {
     color: #8b949e;
@@ -23,10 +24,12 @@ style: |
     max-height: 400px;
   }
   pre {
-    font-size: 0.65em;
+    font-size: 0.52em;
     background: #161b22;
     border-radius: 8px;
-    padding: 1em;
+    padding: 0.7em;
+    overflow-y: auto;
+    max-height: 420px;
   }
   .tech-stack {
     font-size: 0.7em;
@@ -88,24 +91,20 @@ graph LR
 # Demo: Run 1 — Learning from failure
 
 ```
-⏺ Skill(runegard) — loaded
-
-⏺ Parsed 8 steps. Decision points:
-    OOMKilled → Step 5
-    ImagePullBackOff → Step 6
+⏺ Skill(runegard) — loaded. Parsed 8 steps.
 
 ⏺ kubectl get pods -A
-  broken-app   0/1   CrashLoopBackOff   11
-  oom-pod      0/1   CrashLoopBackOff   9
+  broken-app  0/1  CrashLoopBackOff  11
+  oom-pod     0/1  CrashLoopBackOff   9
 
 ⏺ kubectl describe pod <pod-name> -n <namespace>
-  ⚠ Command has template variables — can't resolve
+  ⚠ Template variables — can't resolve
 
-  Steps executed: step-1, step-2, step-3, step-4, step-8
+  Steps: step-1 → step-2 → step-3 → step-4 → step-8
   ❌ Missed OOMKilled branch. Took wrong path.
 ```
 
-First run hits gaps. **But it produced a trace.**
+First run hits gaps — **but it produced a trace.**
 
 ---
 
