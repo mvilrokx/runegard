@@ -7,7 +7,7 @@ Autonomous Kubernetes runbook executor with continual learning.
 1. **Parses** markdown runbooks into executable decision trees
 2. **Executes** them step-by-step against a live K8s cluster
 3. **Asks for approval** before any mutating action
-4. **Learns from failures** via an RLM loop that improves the skill over time
+4. **Learns from failures** via an CL loop that improves the skill over time
 
 ## Quick Start
 

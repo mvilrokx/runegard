@@ -1,4 +1,4 @@
-"""RLM improvement loop - analyzes execution traces and generates learnings."""
+"""CL improvement loop - analyzes execution traces and generates learnings."""
 
 import json
 from pathlib import Path

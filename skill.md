@@ -4,7 +4,7 @@ description: >
   Autonomous runbook executor for Kubernetes operations. Reads markdown runbooks,
   parses them into executable decision trees, and follows them step-by-step
   against a live K8s cluster. Requests human approval before any mutating action.
-  Includes an RLM-powered improvement loop that learns from execution failures.
+  Includes an CL-powered improvement loop that learns from execution failures.
 ---
 
 # RuneGard -- Kubernetes Runbook Executor

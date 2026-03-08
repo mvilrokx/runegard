@@ -83,7 +83,7 @@ Point out: "Same runbook. Smarter execution."
 
 ### Slide 7: Close (15s)
 
-Present the RLM loop diagram and tech stack. Wrap up.
+Present the CL loop diagram and tech stack. Wrap up.
 
 ## After the demo
 

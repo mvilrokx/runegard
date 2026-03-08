@@ -18,9 +18,9 @@ Now, most teams have *runbooks* for this — step-by-step troubleshooting guides
 
 "Here's what happens the first time RuneGard runs a runbook against our broken cluster. It finds the crashing services, but hits a gap — the runbook says 'describe pod-name' but it doesn't know *which* pod yet. It can't fill in the blank, so it takes the wrong path and misses the real issue — one pod is running out of memory. But here's the key: it logged everything it did into a trace."
 
-## Slide 5: The RLM Loop (20s)
+## Slide 5: The CL Loop (20s)
 
-"Now we feed that trace back into Claude. It looks at what happened and figures out what went wrong — 'you should have grabbed the pod name from the first step's output,' 'empty output means you missed something.' It identifies four patterns and writes them down. This is the learning step — reinforcement learning from mistakes."
+"Now we feed that trace back into Claude. It looks at what happened and figures out what went wrong — 'you should have grabbed the pod name from the first step's output,' 'empty output means you missed something.' It identifies four patterns and writes them down. This is the learning step — continuous learning from real executions."
 
 ## Slide 6: Demo Run 2 (25s)
 

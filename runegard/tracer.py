@@ -1,4 +1,4 @@
-"""Execution trace logger for RLM consumption."""
+"""Execution trace logger for CL consumption."""
 
 import json
 from pathlib import Path

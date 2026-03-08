@@ -108,7 +108,7 @@ First run hits gaps — **but it produced a trace.**
 
 ---
 
-# The RLM Loop: What went wrong?
+# The CL Loop: What went wrong?
 
 ```
 $ runegard improve trace_log.json --runbook crashloop.md
@@ -172,7 +172,7 @@ graph TD
 <div class="tech-stack">
 
 **Python 3.12** · **Claude API** · **kubectl**
-**Markdown runbooks** · **RLM feedback loop**
+**Markdown runbooks** · **CL feedback loop**
 
 </div>
 
