@@ -58,7 +58,8 @@ def parse_runbook(path: Path) -> Runbook:
         raw_json = response.content[0].text  # type: ignore[union-attr]
         data = json.loads(raw_json)
         return _json_to_runbook(data)
-    except Exception:
+    except Exception as e:
+        print(f"[warn] Claude API parser failed ({e}), using fallback")
         return parse_runbook_fallback(path)
 
 
