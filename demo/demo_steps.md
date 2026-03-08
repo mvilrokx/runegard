@@ -1,5 +1,7 @@
 # RuneGard — Demo Steps
 
+Everything runs inside Claude Code. No CLI commands needed during the demo.
+
 ## Before the demo
 
 1. **Set up the K8s cluster** (do this well before presenting):
@@ -30,9 +32,10 @@
    ```
    Open `http://localhost:8765/deck.html` in browser. Press `f` for fullscreen.
 
-6. **Set your API key**:
+6. **Set your API key** and open Claude Code:
    ```
    export ANTHROPIC_API_KEY=sk-ant-...
+   claude
    ```
 
 ## During the demo
@@ -41,45 +44,42 @@
 
 Just present — no live commands. Arrow keys to advance.
 
-### Slide 4: Run 1 — show it failing (20s)
+### Slide 4: Run 1 — first attempt (20s)
 
-This slide shows pre-baked output. Talk through it:
-- "The skill loaded, parsed 8 steps"
-- "It found the broken pods but couldn't resolve template variables"
-- "It missed the OOMKilled branch and took the wrong path"
-- "But it produced a trace"
+The slide shows pre-baked output. Talk through it. If doing a live demo, type in Claude Code:
 
-**Optional live demo** (if time allows, replace this slide with a live run):
 ```
-uv run python -m runegard run assets/runbooks/crashloop.md
+Run the crashloop runbook against my cluster
 ```
 
-### Slide 5: Run the improve step (20s)
+Claude will load the RuneGard skill, parse the runbook, and start executing.
+It will hit template variables it can't resolve and take the wrong path.
+Point out: "It failed — but it produced a trace."
 
-This slide shows pre-baked output. Talk through it:
-- "We feed the trace into Claude"
-- "It learned 4 patterns"
-- "Patterns saved to a file for next time"
+### Slide 5: Improve — learn from the failure (20s)
 
-**Optional live demo**:
+The slide shows pre-baked output. Talk through it. If doing a live demo, type in Claude Code:
+
 ```
-uv run python -m runegard improve trace_log.json --runbook assets/runbooks/crashloop.md
+Analyze the trace and improve the skill for next time
 ```
-Then type `yes` when prompted to apply patterns.
 
-### Slide 6: Run 2 — show it succeeding (25s)
+Claude will analyze the trace, identify 4 patterns, and ask if you want to save them.
+Say "yes" — the patterns get written to `references/learned_patterns.md`.
 
-This slide shows pre-baked output. Talk through it:
-- "Same runbook, but now it reads the learned patterns"
-- "Extracts real pod names, branches correctly"
-- "Asks for approval before patching"
+### Slide 6: Run 2 — second attempt with learned patterns (25s)
 
-**Optional live demo** (as a Claude Code skill):
+The slide shows pre-baked output. Talk through it. If doing a live demo, type in Claude Code:
+
 ```
-claude
-> Run the crashloop runbook against my cluster
+Run the crashloop runbook again
 ```
-Type `approve` when it asks for permission to patch.
+
+Claude will load the learned patterns, extract real pod names, branch correctly
+on the out-of-memory error, and ask for approval before patching.
+Type `approve` when prompted.
+
+Point out: "Same runbook. Smarter execution."
 
 ### Slide 7: Close (15s)
 
