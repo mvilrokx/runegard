@@ -1,1 +1,1 @@
-"""RuneGard - Autonomous Kubernetes Runbook Executor"""
+"""RuneGärd - Autonomous Kubernetes Runbook Executor"""

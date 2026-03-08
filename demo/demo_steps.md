@@ -1,4 +1,4 @@
-# RuneGard — Demo Steps
+# RuneGärd — Demo Steps
 
 Everything runs inside Claude Code. No CLI commands needed during the demo.
 
@@ -52,7 +52,7 @@ The slide shows pre-baked output. Talk through it. If doing a live demo, type in
 Run the crashloop runbook against my cluster
 ```
 
-Claude will load the RuneGard skill, parse the runbook, and start executing.
+Claude will load the RuneGärd skill, parse the runbook, and start executing.
 It will hit template variables it can't resolve and take the wrong path.
 Point out: "It failed — but it produced a trace."
 

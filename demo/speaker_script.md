@@ -1,8 +1,8 @@
-# RuneGard — Speaker Script (2:00)
+# RuneGärd — Speaker Script (2:00)
 
 ## Slide 1: Title (5s)
 
-"RuneGard — an autonomous runbook executor that gets smarter every time it runs."
+"RuneGärd — an autonomous runbook executor that gets smarter every time it runs."
 
 ## Slide 2: The Problem (25s)
 
@@ -10,7 +10,7 @@
 
 ## Slide 3: The Solution (20s)
 
-"RuneGard takes those same markdown runbooks and executes them autonomously. Claude parses the runbook into a decision tree, then runs through it. Safe commands execute automatically. Anything risky stops and asks for human approval first. Everything gets logged into a trace."
+"RuneGärd takes those same markdown runbooks and executes them autonomously. Claude parses the runbook into a decision tree, then runs through it. Safe commands execute automatically. Anything risky stops and asks for human approval first. Everything gets logged into a trace."
 
 ## Slide 4: Demo Run 1 (15s)
 
@@ -26,4 +26,4 @@
 
 ## Slide 7: Closing (10s)
 
-"Every run produces a trace. Every trace feeds the loop. It gets better with every incident. RuneGard — autonomous runbook execution with continual learning."
+"Every run produces a trace. Every trace feeds the loop. It gets better with every incident. RuneGärd — autonomous runbook execution with continual learning."

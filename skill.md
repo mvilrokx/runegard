@@ -7,7 +7,7 @@ description: >
   Includes an CL-powered improvement loop that learns from execution failures.
 ---
 
-# RuneGard -- Kubernetes Runbook Executor
+# RuneGärd -- Kubernetes Runbook Executor
 
 ## When to Use This Skill
 

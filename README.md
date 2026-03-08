@@ -1,4 +1,4 @@
-# RuneGard
+# RuneGärd
 
 Autonomous Kubernetes runbook executor with continual learning.
 

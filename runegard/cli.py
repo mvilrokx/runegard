@@ -1,4 +1,4 @@
-"""CLI entry point for RuneGard."""
+"""CLI entry point for RuneGärd."""
 
 import argparse
 from pathlib import Path
@@ -9,7 +9,7 @@ from runegard.models import StepType
 def main():
     parser = argparse.ArgumentParser(
         prog="runegard",
-        description="RuneGard - Autonomous Kubernetes Runbook Executor",
+        description="RuneGärd - Autonomous Kubernetes Runbook Executor",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 

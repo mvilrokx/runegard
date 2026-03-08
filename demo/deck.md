@@ -43,7 +43,7 @@ style: |
 
 <!-- _class: invert lead -->
 
-# RuneGard
+# RuneGärd
 
 ### Autonomous K8s Runbook Executor
 ### with Continual Learning
@@ -70,7 +70,7 @@ Manual. Slow. Error-prone. **Doesn't learn from past incidents.**
 
 ---
 
-# RuneGard: The Solution
+# RuneGärd: The Solution
 
 <div class="mermaid">
 graph LR
@@ -178,7 +178,7 @@ graph TD
 
 <br>
 
-**RuneGard** — autonomous runbook execution with continual learning.
+**RuneGärd** — autonomous runbook execution with continual learning.
 
 ---
 

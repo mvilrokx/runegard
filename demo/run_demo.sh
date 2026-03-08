@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
-echo "=== RuneGard Demo ==="
+echo "=== RuneGärd Demo ==="
 echo ""
 
 echo "Step 1: Parse the runbook"
